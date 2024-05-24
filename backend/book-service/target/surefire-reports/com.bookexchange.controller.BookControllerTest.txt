@@ -1,0 +1,21 @@
+-------------------------------------------------------------------------------
+Test set: com.bookexchange.controller.BookControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 6.995 s <<< FAILURE! -- in com.bookexchange.controller.BookControllerTest
+com.bookexchange.controller.BookControllerTest.getBooks_returnsAllBooks_whenAuthorized -- Time elapsed: 0.838 s <<< ERROR!
+java.lang.NoClassDefFoundError: javax/xml/bind/DatatypeConverter
+	at io.jsonwebtoken.impl.Base64Codec.encode(Base64Codec.java:21)
+	at io.jsonwebtoken.impl.Base64UrlCodec.encode(Base64UrlCodec.java:22)
+	at io.jsonwebtoken.impl.DefaultJwtBuilder.base64UrlEncode(DefaultJwtBuilder.java:349)
+	at io.jsonwebtoken.impl.DefaultJwtBuilder.compact(DefaultJwtBuilder.java:295)
+	at com.bookexchange.util.JwtTestUtil.generateToken(JwtTestUtil.java:20)
+	at com.bookexchange.controller.BookControllerTest.setUp(BookControllerTest.java:39)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+Caused by: java.lang.ClassNotFoundException: javax.xml.bind.DatatypeConverter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 9 more
+

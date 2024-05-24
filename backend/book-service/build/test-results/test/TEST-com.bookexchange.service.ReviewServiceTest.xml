@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bookexchange.service.ReviewServiceTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-05-18T13:18:06" hostname="MacBook-Pro-Artem.local" time="0.132">
+  <properties/>
+  <testcase name="Получение отзывов по exchangeId" classname="com.bookexchange.service.ReviewServiceTest" time="0.111"/>
+  <testcase name="Добавление отзыва" classname="com.bookexchange.service.ReviewServiceTest" time="0.015"/>
+  <testcase name="Получение отзывов по revieweeId" classname="com.bookexchange.service.ReviewServiceTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

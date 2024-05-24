@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bookexchange.service.ExchangeServiceTest" tests="7" skipped="0" failures="1" errors="0" timestamp="2025-05-18T13:18:06" hostname="MacBook-Pro-Artem.local" time="0.317">
+  <properties/>
+  <testcase name="Подтверждение обмена" classname="com.bookexchange.service.ExchangeServiceTest" time="0.259"/>
+  <testcase name="Отклонение обмена" classname="com.bookexchange.service.ExchangeServiceTest" time="0.006"/>
+  <testcase name="Предложение обмена" classname="com.bookexchange.service.ExchangeServiceTest" time="0.008"/>
+  <testcase name="Сохранение обмена" classname="com.bookexchange.service.ExchangeServiceTest" time="0.006"/>
+  <testcase name="Ошибка: несуществующий обмен" classname="com.bookexchange.service.ExchangeServiceTest" time="0.008"/>
+  <testcase name="Получение обмена по id" classname="com.bookexchange.service.ExchangeServiceTest" time="0.004"/>
+  <testcase name="История обменов для пользователя" classname="com.bookexchange.service.ExchangeServiceTest" time="0.018">
+    <failure message="java.lang.AssertionError: &#10;Expected size: 2 but was: 0 in:&#10;[]" type="java.lang.AssertionError">java.lang.AssertionError: 
+Expected size: 2 but was: 0 in:
+[]
+	at com.bookexchange.service.ExchangeServiceTest.exchangeHistory(ExchangeServiceTest.java:92)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

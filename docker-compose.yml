@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: bookdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  book-service:
+    build: ./backend/book-service
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+
+  auth-service:
+    build: ./auth-service
+    environment:
+      - JWT_SECRET=D7vK1gE9ZqP4nW0sT3bLrY6xM2aQ8cUfH5eJiXpCtNhRvSzLmYgBqWdXeTkV9uJo
+
+    ports:
+      - "8081:8081"
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - book-service
+      - auth-service
+
+volumes:
+  pgdata:
